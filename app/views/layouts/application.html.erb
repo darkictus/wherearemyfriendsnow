@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+<% if current_user %>
+	<p> Conectado como <%= current_user.name %>
+	<%= link_to "Cerrar sesión", signout_path %> 
+<% else %>
+	<p><%= link_to "Iniciar sesión con Foursquare", "/auth/foursquare" %> </p>
+<% end %>
 
 <%= yield %>
 
