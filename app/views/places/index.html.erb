@@ -1,10 +1,7 @@
 <h1>Probando el api de Foursquare </h1>
-
-
 <% if current_user %>
-	
-<pre>  
-	<% a =(current_user.authhash) %>
-	<%= a["info"]%>
-</pre>
-<%end%>
+	<pre>
+	<%= @client.recent_checkins.to_yaml %>
+	</pre>
+<% end %>
+
