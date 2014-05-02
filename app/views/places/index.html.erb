@@ -1,4 +1,10 @@
 <h1>Probando el api de Foursquare </h1>
-<pre>
-	<%= @info_foursquare.to_yaml %>
+
+
+<% if current_user %>
+	
+<pre>  
+	<% a =(current_user.authhash) %>
+	<%= a["info"]%>
 </pre>
+<%end%>

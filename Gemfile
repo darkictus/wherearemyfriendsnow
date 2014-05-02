@@ -46,3 +46,7 @@ gem 'capistrano'
 
 # Authentication with Foursquare
 gem 'omniauth-foursquare'
+
+# Foursquare 2 gm
+
+gem 'foursquare2'
