@@ -11,13 +11,19 @@
  *= require_self
  *= require_tree .
  */
-<<<<<<< HEAD
+
 
 #map {
-	height:650px;
+	height:450px;
 	width: 100%;
 
 	
 }
-=======
->>>>>>> 3effa177182ca5790cbeabd9d03f3a3e9e980079
+h1 {
+	color: blue;
+	font-family:"Arial";
+
+
+}
+body {background-color:#b0c4de;} 
+
