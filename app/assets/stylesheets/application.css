@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+<<<<<<< HEAD
 
 #map {
 	height:650px;
@@ -18,3 +19,5 @@
 
 	
 }
+=======
+>>>>>>> 3effa177182ca5790cbeabd9d03f3a3e9e980079

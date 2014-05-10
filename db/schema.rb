@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20140502031440) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+
     t.string   "authsecret"
     t.string   "authhash"
+
     t.string   "token"
   end
 

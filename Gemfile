@@ -50,4 +50,5 @@ gem 'omniauth-foursquare'
 #Gem for foursquare
 gem 'foursquare2'
 
+
 gem 'gmapsjs'
