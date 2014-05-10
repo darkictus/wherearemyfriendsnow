@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dangerzone</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+
+
+
+</head>
+
+<body>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+<% if current_user %>
+	<p> Conectado como <%= current_user.name %></p>
+
+	<%= link_to "Cerrar sesión", signout_path %> 
+<% else %>
+	<p><%= link_to "Iniciar sesión con Foursquare", "/auth/foursquare" %> </p>
+<% end %>
+
+<%= yield %>
+
+	
+	
+
+
+     
+   
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<h1>Probando el api de Foursquare </h1>
+<% if current_user %>
+
+	<div id="map"></div>
+
+    <script type="text/javascript">
+            var map;
+            $(document).ready(function(){
+                    map = new GMaps ({
+                            el: '#map',
+                            lat: -12.044357,
+                            lng: -77.041311
+     
+                    })
+     
+                    var markers = <%= @places.to_json.html_safe %>;
+                    loadResults(markers);
+            });
+     
+            function loadResults (markers) {
+                    var markers_data = []
+                    for (i = 0; i < markers.length; i++){
+                            var marker = markers[i];
+                            markers_data.push({
+                                    title: marker.uname,
+                                    lat: marker.lat,
+                                    lng: marker.lng,
+                                    icon: marker.image
+                            });
+                    }
+                    map.addMarkers(markers_data);
+        }
+         </script>
+
+<% end %>
+
