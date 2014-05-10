@@ -18,6 +18,7 @@
   <% end %>
 <% if current_user %>
 	<p> Conectado como <%= current_user.name %></p>
+  <%=current_user.to_yaml%>
 
 	<%= link_to "Cerrar sesión", signout_path %> 
 <% else %>
